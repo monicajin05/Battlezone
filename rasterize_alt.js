@@ -468,13 +468,13 @@ function handleKeyDown(e) {
 
     // strafe left
     case "KeyA": 
-      vec3.scaleAndAdd(move, move, right, -MOVE_SPEED);
+      vec3.scaleAndAdd(move, move, right, MOVE_SPEED);
       didMove = true;
       break;
 
     // strafe right
     case "KeyD": 
-      vec3.scaleAndAdd(move, move, right, MOVE_SPEED);
+      vec3.scaleAndAdd(move, move, right, -MOVE_SPEED);
       didMove = true;
       break;
 
