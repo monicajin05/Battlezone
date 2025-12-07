@@ -1,0 +1,63 @@
+#myWebGLCanvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+}
+
+#myImageCanvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#myWebGLCanvas {
+  display: block;
+  background: url("sky.jpg") center center / cover no-repeat;
+  cursor: none;
+}
+
+/* Crosshair container */
+#crosshair {
+  position: fixed;          
+  width: 16px;
+  height: 16px;
+  pointer-events: none;      /* don't block mouse events */
+  transform: translate(-50%, -50%); 
+  z-index: 1000;
+}
+
+/* Vertical line */
+#crosshair .vert,
+#crosshair .horiz {
+  position: absolute;
+  background: white;         
+}
+
+/* vertical bar */
+#crosshair .vert {
+  width: 2px;
+  height: 16px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* horizontal bar */
+#crosshair .horiz {
+  height: 2px;
+  width: 16px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
